@@ -6,3 +6,4 @@ Integrantes:
 Nicolas Porras
 Daniel Cárdenas
 Yulian Múnera
+Alejandro Luján R.
