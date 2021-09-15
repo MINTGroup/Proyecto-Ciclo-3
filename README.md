@@ -3,7 +3,7 @@ Repositorio para el proyecto MinTIC del ciclo 3.
 
 
 Integrantes:
-Nicolas Porras
-Daniel Cárdenas
-Yulian Múnera
+Nicolas Porras,
+Daniel Cárdenas,
+Yulian Múnera,
 Alejandro Luján R.
