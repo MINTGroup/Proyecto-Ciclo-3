@@ -7,4 +7,5 @@ Nicolas Porras,
 Daniel Cárdenas,
 Jesús Muñoz,
 Yulian Múnera,
-Alejandro Luján R.
+Alejandro Luján R,
+Jessica Toro.
