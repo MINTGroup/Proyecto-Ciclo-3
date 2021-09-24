@@ -18,8 +18,6 @@ body {
 
   display: grid;
   grid-column: 1;
-
-  max-width: 410px;
   height: 550px;
 
   color: #212529;
@@ -30,6 +28,7 @@ body {
   left: 13.6%;
   position: absolute;
 
+  max-width: 35%;
   box-sizing: border-box;
 
 }
@@ -114,9 +113,9 @@ body {
   right: 10%;
   position: absolute;
 
-  /* margin-top: 70px; */
+  max-width: 40%;
 }
 
 .svg img{
-  width: 545px;
+width: 100%;
 }
