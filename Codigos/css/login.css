@@ -7,10 +7,11 @@ body {
   background-color: #f8fafb;
 }
 
+
 .grid-container {
   display: grid;
-  width: 100%;
-  height: 90px;
+  width: 100vw;
+  height: 80vh;
   grid-template-columns: 1fr, 1fr;
 }
 
@@ -19,7 +20,7 @@ body {
   display: grid;
   grid-column: 1;
 
-  max-width: 410px;
+  max-width: 35%;
   height: 550px;
 
   color: #212529;
@@ -113,10 +114,86 @@ body {
   top: 17%;
   right: 10%;
   position: absolute;
+  max-width: 40%;
+
 
   /* margin-top: 70px; */
 }
 
 .svg img{
-  width: 545px;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 10px 10px ;
+  background-color: #cbcbcb;
+  border-bottom: 1px solid #444444;
+  box-shadow: 2px 2px aliceblue;
+  margin: 0px
+}
+.navbar > li {
+  display: flex;
+  align-items: center;
+}
+.logo{
+  height: 50px;
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Roboto;
+  color: #cbcbcb;
+  background: #444;
+  background: #333;
+  background: linear-gradient(to bottom,#485054 0,#333738 100%);
+  border-top: 1px solid #333738;
+}
+.footer-content > ul{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  text-align: center;
+  padding: 10px 10px 0px 10px;
+}
+.footer-img{
+  height: 60px;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding-bottom: 20px;
+}
+
+ul>h3{
+  margin: 5px;
+}
+.formulario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Roboto;
+  background: transparent;
+  color: #888;
+  font-weight: 300;
+  font-size: 12px;
+}
+.formulario > button{
+
+  border: none;
+  outline: none;
+  height: 55px;
+  width: 150px;
+  background: #38d39f;
+  color: #fff;
+  font-size: 16px;
+  font-family: Roboto;
+  border-radius: 5px;
+}
+.contact-main{
+  height: 70vh;
 }
