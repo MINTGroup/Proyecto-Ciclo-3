@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import "styles/styles.css";
-import PrivateLayout from "layouts/PrivateLayout";
-import PublicLayout from "layouts/PrivateLayout";
-import AuthenticationLayout from "layouts/AuthenticationLayout";
-import Index from "pages/Admin/Index";
-import Login from "pages/Authentication/Login";
-import Registration from "pages/Authentication/Registration";
-import Products from "pages/Admin/Products";
-import Admin from "pages/Admin";
+import "./styles/styles.css";
+import PrivateLayout from "./layouts/PrivateLayout";
+import PublicLayout from "./layouts/PublicLayout";
+import AuthenticationLayout from "./layouts/AuthenticationLayout";
+import Index from "./pages/Admin";
+import Login from "./pages/Authentication/Login";
+import Registration from "./pages/Authentication/Registration";
+import Products from "./pages/Admin/Products";
+import Admin from "./pages/Admin";
 
  function App(){
      return (
@@ -43,7 +43,7 @@ import Admin from "pages/Admin";
                          <PublicLayout>
                              <Switch>
                                  <Route path="/">
-                                     <Index />
+                                     <index />
                                  </Route>
                              </Switch>
                          </PublicLayout>

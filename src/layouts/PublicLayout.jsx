@@ -1,14 +1,16 @@
 import React from 'react';
-import Navbar from 'components/Navbar';
-import Footer from 'components/Footer';
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
+import SideBar from "../components/SideBar";
 
 const PublicLayout = ({children}) => {
     return (
-        <div>
-            <h3>Layout público (Landing page)</h3>
-            <Navbar />
-            <main>{children}</main>
-            <Footer />
+        <div className={"landingPage"}>
+            <NavBar></NavBar>
+            <div className={"landingPageContent"}>
+                <h3>Layout público (Landing page)
+                </h3></div>
+
         </div>
     );
 
