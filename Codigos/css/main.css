@@ -1,0 +1,28 @@
+.fondo {
+    background-color: #e2e5e8;
+    max-width: 97%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 10px;
+
+}
+
+.bg-primary {
+    background-color: #279d85 !important;
+}
+
+.bg-secondary {
+    background-color: #091f3c !important;
+}
+
+
+.card {
+    border-radius: 10px;
+}
+
+
+
+.navbar-nav {
+    margin-left: 55%;
+}
+
