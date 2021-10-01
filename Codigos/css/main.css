@@ -20,7 +20,11 @@
     border-radius: 10px;
 }
 
-
+i:hover{
+    transform: scale(1.07);
+    cursor: pointer;
+    color: #0a53be;
+}
 
 .navbar-nav {
     margin-left: 55%;
