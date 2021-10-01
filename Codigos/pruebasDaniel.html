@@ -15,6 +15,15 @@
     <link rel="icon"
           type="image/ico"
           href="./assets/img/LOGO_MINT(no%20fondo).ico">
+    <style>
+        .form-check-input:checked {
+            background-color: #38d39f;
+            border-color: #38d39f;
+        }
+        .form-check-input:focus {
+            box-shadow: none;
+            }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
@@ -33,27 +42,36 @@
                         <h3>Sign up</h3>
                         <p>Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p>
                         <form>
-                            <div class="mb-4 ">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="Name" class="form-label"></label>
+                                    <input class="rounded-0 border-0 border-bottom form-control flex-fill" type="text" class="form-control" id="Name" placeholder="Name">
+                                </div>
+                                <div class="col">
+                                    <label for="Last_name" class="form-label"></label>
+                                    <input class="rounded-0 border-0 border-bottom form-control flex-fill" type="text" class="form-control" id="Last_name" placeholder="Last name">
+                                </div>
+                            </div>
+                            <div class="mb-3">
                                 <label for="Email" class="form-label"></label>
-                                <input class="border-0 border-bottom" type="text" class="form-control" id="Email" placeholder="Name">
+                                <input class="rounded-0 border-0 border-bottom form-control flex-fill" type="text" class="form-control" id="Email" placeholder="Email">
                             </div>
-                            <div class="mb-4">
-                                <label for="Name" class="form-label"></label>
-                                <input class="border-0 border-bottom" type="text" class="form-control" id="Name" placeholder="Email">
-                            </div>
-                            <div class="mb-4">
+                            <div class="mb-3">
                                 <label for="Password" class="form-label"></label>
-                                <input class="border-0 border-bottom" type="password" class="form-control" id="Password" placeholder="Password">
+                                <input class="rounded-0 border-0 border-bottom form-control flex-fill" type="password" class="form-control" id="Password" placeholder="Password">
                             </div>
-                            <div class="mb-4">
+                            <div class="mb-3">
                                 <label for="Re-Password" class="form-label"></label>
-                                <input class="border-0 border-bottom" type="password" class="form-control" id="Re-Password" placeholder="Re-type Password">
+                                <input class="rounded-0 border-0 border-bottom form-control flex-fill " type="password" class="form-control" id="Re-Password" placeholder="Re-type Password">
                             </div>
                             <div class="mb-4 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                <input type="checkbox" class="form-check-input" id="check1">
+                                <label class="form-check-label" for="check1">
+                                    Creating an account means you're okay with our Terms and Conditions and our Privacy Policy.</label>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <div class="d-grid gap-2 mb-4">
+                                <button type="submit" class="btn btn-primary btn-logreg border-0" >Register</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -63,6 +81,32 @@
             </div>
         </div>
     </main>
+    <footer class="bg-dark text-center text-white">
+        <div class="container p-4 pb-0">
+            <section class="mb-4">
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
 
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-twitter"></i></a>
+
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-google"></i></a>
+
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-instagram"></i></a>
+
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-linkedin-in"></i></a>
+
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-github"></i></a>
+            </section>
+        </div>
+
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            Desarrollado por: MINT
+        </div>
+    </footer>
 </body>
 </html>
