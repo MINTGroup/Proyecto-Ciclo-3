@@ -14,6 +14,9 @@
 .bg-secondary {
     background-color: #091f3c !important;
 }
+.bg-tertiary {
+    background-color: #90929a !important;
+}
 
 
 .card {
@@ -21,7 +24,7 @@
 }
 
 i:hover{
-    transform: scale(1.07);
+    transform: scale(1.2);
     cursor: pointer;
     color: #0a53be;
 }
