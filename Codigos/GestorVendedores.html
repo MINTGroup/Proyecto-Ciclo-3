@@ -2,167 +2,883 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Mint</title>
-
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Seller - Mint</title>
+    <!--  Boostrap  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
     </script>
 
+    <!--  DataTables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css"/>
+    <!--  SS & Fonts -->
     <script src="https://kit.fontawesome.com/931cb478e2.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/main.css"/>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">MINT</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">MINT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            #UserName
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Log out</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        #UserName
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Log out</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <main class="container-fluid fondo p-4">
-        <div class="row mb-4">
-            <div class="col-lg-4">
-                <div class="card text-white bg-primary">
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            $500.00 <i class="fas fa-arrow-circle-up"></i>
-                        </h4>
-                        <p class="card-text">Total Earning</p>
+<main class="container-fluid fondo p-4">
+    <div class="col">
+        <div class="row mb-2">
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 text-white bg-primary">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <div class="card-body">
+                                    <button type="button" class="btn btn-outline-light btn-sm" style="box-shadow: none">
+                                        <i class="fas fa-box"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-lg-6"></div>
+                            <div class="col">
+                                <div class="card-body">
+                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                        <input type="radio" class="btn-check" name="btnradio1" id="btnradio01"
+                                               autocomplete="off" checked>
+                                        <label class="btn btn-outline-light btn-sm" for="btnradio01"
+                                               style="box-shadow: none" onclick="changeImage1()">Year</label>
+
+                                        <input type="radio" class="btn-check" name="btnradio1" id="btnradio02"
+                                               autocomplete="off">
+                                        <label class="btn btn-outline-light btn-sm" for="btnradio02"
+                                               style="box-shadow: none" onclick="changeImage1()">Month</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="row mb-6">
+                            <div class="col-lg-6">
+                                <div class="card-body">
+                                    <h2 class="card-title" id="demo2">
+                                        $6942.00 <i class="fas fa-arrow-circle-up"></i>
+                                    </h2>
+                                    <p class="card-text" style="color: rgba(255,255,255,0.75)">
+                                        Total Earnings
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card text-center bg-primary" style="border: none">
+                                    <div class="card-body">
+                                        <img id="myImage1" src="assets/img/micrographic.png" width="49%"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 text-white bg-secondary">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <div class="card-body">
+                                    <button type="button" class="btn btn-outline-light btn-sm" style="box-shadow: none">
+                                        <i class="fas fa-shopping-bag"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-lg-6"></div>
+                            <div class="col">
+                                <div class="card-body">
+                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1"
+                                               autocomplete="off" checked>
+                                        <label class="btn btn-outline-light btn-sm" for="btnradio1"
+                                               style="box-shadow: none"
+                                               onclick="changeImage()">Year</label>
 
-            <div class="col-lg-4">
-                <div class="card text-white bg-secondary">
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            $961 <i class="fas fa-arrow-circle-down"></i>
-                        </h4>
-                        <p class="card-text">Total Earning</p>
+                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2"
+                                               autocomplete="off">
+                                        <label class="btn btn-outline-light btn-sm" for="btnradio2"
+                                               style="box-shadow: none"
+                                               onclick="changeImage()">Month</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="row mb-6">
+                            <div class="col-lg-6">
+                                <div class="card-body">
+                                    <h2 class="card-title" id="demo1">
+                                        420 <i class="fas fa-arrow-circle-down"></i>
+                                    </h2>
+                                    <p class="card-text" style="color: rgba(255,255,255,0.75)">
+                                        Total orders
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card text-center bg-secondary" style="border: none">
+                                    <div class="card-body">
+                                        <img id="myImage" src="assets/img/micrographic.png" height="49%" width="49%"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-4">
-                <div class="row mb-2">
+            <div class="col-lg-4 mb-4">
+                <div class="row mb-4">
                     <div class="col-lg-12">
                         <div class="card text-white bg-secondary">
-                            <div class="card-body"><i class="fas fa-store"></i> $203k</div>
+                            <div class="card-body">
+                                <a href="#Sales List">
+                                    <button type="button" class="btn btn-outline-light btn-sm" style="box-shadow: none">
+                                        <i class="fas fa-shipping-fast"></i> Successful deliveries
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mb-4">
                     <div class="col-lg-12">
                         <div class="card bg-light text-dark">
-                            <div class="card-body"><i class="fas fa-store amarillo"></i> $203k</div>
+                            <div class="card-body">
+                                <a href="#Product List">
+                                    <button type="button" class="btn btn-outline-dark btn-sm" style="box-shadow: none">
+                                        <i class="fas fa-cart-arrow-down"></i> Orders in stock
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="card bg-light text-dark">
-                    <div class="card-header">$2,324.00</div>
+        <a name="Product List"></a>
+        <div class="row mb-4 mt-2">
+            <div class="col-12">
+                <div class="card p-3 bg-light text-dark">
+                    <div class="card-header bg-light">
+                        <div class="row">
+                            <div class="col-9">
+                                <h5><i class="fas fa-shopping-cart"></i> Product List</h5>
+                            </div>
+                            <div class="col-3 p-0" align="right">
+                                <a class="btn btn-outline-danger btn-sm rounded-circle border-0"
+                                   href="#" type="submit" style="box-shadow: none">
+                                    <i class="far fa-trash-alt"></i>
+                                </a>
+                                <a class="btn btn-outline-info btn-sm rounded-circle border-0"
+                                   href="#" type="submit" style="box-shadow: none">
+                                    <i class="fas fa-print"></i>
+                                </a>
+                                <a class="btn btn-outline-warning btn-sm rounded-circle border-0"
+                                   href="#" type="submit" style="box-shadow: none">
+                                    <i class="fas fa-pen"></i>
+                                </a>
+                                <a class="btn btn-outline-secondary btn-sm rounded-circle"
+                                   href="Editor_productos.html" type="submit" style="box-shadow: none">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="card-body">
-                        <img src="assets/img/barxchart.svg" alt="" />
+                        <div class="col-lg-12">
+                            <table id="data-table-I" class="display" style="width:100%">
+                                <caption><p class="text-muted">Product List</p></caption>
+                                <thead>
+                                <tr>
+                                    <th class="text-center">
+                                        <button style="border: none; background: transparent; font-size: 14px;"
+                                                id="MyTableCheckAllButton1">
+                                            <i class="far fa-square"></i>
+                                        </button>
+                                    </th>
+                                    <th>Product ID</th>
+                                    <th>Product Name</th>
+                                    <th>Brand</th>
+                                    <th>Model</th>
+                                    <th>Price</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>$320,800</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Garrett Winters</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>63</td>
+                                    <td>$170,750</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Ashton Cox</td>
+                                    <td>Junior Technical Author</td>
+                                    <td>San Francisco</td>
+                                    <td>66</td>
+                                    <td>$86,000</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Cedric Kelly</td>
+                                    <td>Senior Javascript Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td>22</td>
+                                    <td>$433,060</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Airi Satou</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>33</td>
+                                    <td>$162,700</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Brielle Williamson</td>
+                                    <td>Integration Specialist</td>
+                                    <td>New York</td>
+                                    <td>61</td>
+                                    <td>$372,000</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Herrod Chandler</td>
+                                    <td>Sales Assistant</td>
+                                    <td>San Francisco</td>
+                                    <td>59</td>
+                                    <td>$137,500</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Rhona Davidson</td>
+                                    <td>Integration Specialist</td>
+                                    <td>Tokyo</td>
+                                    <td>55</td>
+                                    <td>$327,900</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Colleen Hurst</td>
+                                    <td>Javascript Developer</td>
+                                    <td>San Francisco</td>
+                                    <td>39</td>
+                                    <td>$205,500</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Sonya Frost</td>
+                                    <td>Software Engineer</td>
+                                    <td>Edinburgh</td>
+                                    <td>23</td>
+                                    <td>$103,600</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Jena Gaines</td>
+                                    <td>Office Manager</td>
+                                    <td>London</td>
+                                    <td>30</td>
+                                    <td>$90,560</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Quinn Flynn</td>
+                                    <td>Support Lead</td>
+                                    <td>Edinburgh</td>
+                                    <td>22</td>
+                                    <td>$342,000</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Charde Marshall</td>
+                                    <td>Regional Director</td>
+                                    <td>San Francisco</td>
+                                    <td>36</td>
+                                    <td>$470,600</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Haley Kennedy</td>
+                                    <td>Senior Marketing Designer</td>
+                                    <td>London</td>
+                                    <td>43</td>
+                                    <td>$313,500</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Gloria Little</td>
+                                    <td>Systems Administrator</td>
+                                    <td>New York</td>
+                                    <td>59</td>
+                                    <td>$237,500</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Bradley Greer</td>
+                                    <td>Software Engineer</td>
+                                    <td>London</td>
+                                    <td>41</td>
+                                    <td>$132,000</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Dai Rios</td>
+                                    <td>Personnel Lead</td>
+                                    <td>Edinburgh</td>
+                                    <td>35</td>
+                                    <td>$217,500</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Jenette Caldwell</td>
+                                    <td>Development Lead</td>
+                                    <td>New York</td>
+                                    <td>30</td>
+                                    <td>$345,000</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Yuri Berry</td>
+                                    <td>Chief Marketing Officer (CMO)</td>
+                                    <td>New York</td>
+                                    <td>40</td>
+                                    <td>$675,000</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Caesar Vance</td>
+                                    <td>Pre-Sales Support</td>
+                                    <td>New York</td>
+                                    <td>21</td>
+                                    <td>$106,450</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Doris Wilder</td>
+                                    <td>Sales Assistant</td>
+                                    <td>Sydney</td>
+                                    <td>23</td>
+                                    <td>$85,600</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Angelica Ramos</td>
+                                    <td>Chief Executive Officer (CEO)</td>
+                                    <td>London</td>
+                                    <td>47</td>
+                                    <td>$1,200,000</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Gavin Joyce</td>
+                                    <td>Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td>42</td>
+                                    <td>$92,575</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Jennifer Chang</td>
+                                    <td>Regional Director</td>
+                                    <td>Singapore</td>
+                                    <td>28</td>
+                                    <td>$357,650</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Brenden Wagner</td>
+                                    <td>Software Engineer</td>
+                                    <td>San Francisco</td>
+                                    <td>28</td>
+                                    <td>$206,850</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Fiona Green</td>
+                                    <td>Chief Operating Officer (COO)</td>
+                                    <td>San Francisco</td>
+                                    <td>48</td>
+                                    <td>$850,000</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="col-lg-4">
-                <div class="card bg-light text-dark">
-                    <div class="card-header">Popular Stocks</div>
+        <a name="Sales List"></a>
+        <div class="row mb-4 mt-2">
+            <div class="col-12">
+                <div class="card p-3 bg-light text-dark">
+                    <div class="card-header bg-light">
+                        <div class="row">
+                            <div class="col-9">
+                                <h5><i class="fas fa-cash-register"></i> Sells List</h5>
+                            </div>
+                            <div class="col-3 p-0" align="right">
+                                <a class="btn btn-outline-danger btn-sm rounded-circle border-0"
+                                   href="#" type="submit" style="box-shadow: none">
+                                    <i class="far fa-trash-alt"></i>
+                                </a>
+                                <a class="btn btn-outline-info btn-sm rounded-circle border-0"
+                                   href="#" type="submit" style="box-shadow: none">
+                                    <i class="fas fa-print"></i>
+                                </a>
+                                <a class="btn btn-outline-warning btn-sm rounded-circle border-0"
+                                   href="#" type="submit" style="box-shadow: none">
+                                    <i class="fas fa-pen"></i>
+                                </a>
+                                <a class="btn btn-outline-secondary btn-sm rounded-circle"
+                                   href="Editor_ventas.html" type="submit" style="box-shadow: none">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="card-body">
-                        <img src="assets/img/graficochafa.png" alt="" />
-
-                        <p class="card-text">Total Earning</p>
-
-                        <p class="card-text">Total Earning</p>
-
-                        <p class="card-text">Total Earning</p>
-
-                        <p class="card-text">Total Earning</p>
-
-                        <p class="card-text">Total Earning</p>
-
-                        <p class="card-text">Total Earning</p>
-
-                        <p class="card-text">Total Earning</p>
+                        <div class="col-lg-12">
+                            <table id="data-table-II" class="display" style="width:100%">
+                                <caption><p class="text-muted">Sales List</p></caption>
+                                <thead>
+                                <tr>
+                                    <th class="text-center">
+                                        <button style="border: none; background: transparent; font-size: 14px;"
+                                                id="MyTableCheckAllButton2">
+                                            <i class="far fa-square"></i>
+                                        </button>
+                                    </th>
+                                    <th>Seller ID</th>
+                                    <th>Sell Date</th>
+                                    <th>QTY</th>
+                                    <th>Product ID</th>
+                                    <th>Product Name</th>
+                                    <th>Brand</th>
+                                    <th>Model</th>
+                                    <th>Price</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>$320,800</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Garrett Winters</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>63</td>
+                                    <td>$170,750</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Ashton Cox</td>
+                                    <td>Junior Technical Author</td>
+                                    <td>San Francisco</td>
+                                    <td>66</td>
+                                    <td>$86,000</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Cedric Kelly</td>
+                                    <td>Senior Javascript Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td>22</td>
+                                    <td>$433,060</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Airi Satou</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>33</td>
+                                    <td>$162,700</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Brielle Williamson</td>
+                                    <td>Integration Specialist</td>
+                                    <td>New York</td>
+                                    <td>61</td>
+                                    <td>$372,000</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Herrod Chandler</td>
+                                    <td>Sales Assistant</td>
+                                    <td>San Francisco</td>
+                                    <td>59</td>
+                                    <td>$137,500</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Rhona Davidson</td>
+                                    <td>Integration Specialist</td>
+                                    <td>Tokyo</td>
+                                    <td>55</td>
+                                    <td>$327,900</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Colleen Hurst</td>
+                                    <td>Javascript Developer</td>
+                                    <td>San Francisco</td>
+                                    <td>39</td>
+                                    <td>$205,500</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Sonya Frost</td>
+                                    <td>Software Engineer</td>
+                                    <td>Edinburgh</td>
+                                    <td>23</td>
+                                    <td>$103,600</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Jena Gaines</td>
+                                    <td>Office Manager</td>
+                                    <td>London</td>
+                                    <td>30</td>
+                                    <td>$90,560</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Quinn Flynn</td>
+                                    <td>Support Lead</td>
+                                    <td>Edinburgh</td>
+                                    <td>22</td>
+                                    <td>$342,000</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Charde Marshall</td>
+                                    <td>Regional Director</td>
+                                    <td>San Francisco</td>
+                                    <td>36</td>
+                                    <td>$470,600</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Haley Kennedy</td>
+                                    <td>Senior Marketing Designer</td>
+                                    <td>London</td>
+                                    <td>43</td>
+                                    <td>$313,500</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Gloria Little</td>
+                                    <td>Systems Administrator</td>
+                                    <td>New York</td>
+                                    <td>59</td>
+                                    <td>$237,500</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Bradley Greer</td>
+                                    <td>Software Engineer</td>
+                                    <td>London</td>
+                                    <td>41</td>
+                                    <td>$132,000</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Dai Rios</td>
+                                    <td>Personnel Lead</td>
+                                    <td>Edinburgh</td>
+                                    <td>35</td>
+                                    <td>$217,500</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Jenette Caldwell</td>
+                                    <td>Development Lead</td>
+                                    <td>New York</td>
+                                    <td>30</td>
+                                    <td>$345,000</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Yuri Berry</td>
+                                    <td>Chief Marketing Officer (CMO)</td>
+                                    <td>New York</td>
+                                    <td>40</td>
+                                    <td>$675,000</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Caesar Vance</td>
+                                    <td>Pre-Sales Support</td>
+                                    <td>New York</td>
+                                    <td>21</td>
+                                    <td>$106,450</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Doris Wilder</td>
+                                    <td>Sales Assistant</td>
+                                    <td>Sydney</td>
+                                    <td>23</td>
+                                    <td>$85,600</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Angelica Ramos</td>
+                                    <td>Chief Executive Officer (CEO)</td>
+                                    <td>London</td>
+                                    <td>47</td>
+                                    <td>$1,200,000</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Gavin Joyce</td>
+                                    <td>Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td>42</td>
+                                    <td>$92,575</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Jennifer Chang</td>
+                                    <td>Regional Director</td>
+                                    <td>Singapore</td>
+                                    <td>28</td>
+                                    <td>$357,650</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Brenden Wagner</td>
+                                    <td>Software Engineer</td>
+                                    <td>San Francisco</td>
+                                    <td>28</td>
+                                    <td>$206,850</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Fiona Green</td>
+                                    <td>Chief Operating Officer (COO)</td>
+                                    <td>San Francisco</td>
+                                    <td>48</td>
+                                    <td>$850,000</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                    <td>Sample Text</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
 
-    <footer class="bg-dark text-center text-white">
-        <div class="container p-4 pb-0">
-            <section class="mb-4">
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-facebook-f"></i></a>
+    <!--Optional DataTable JS Init-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.11.3/datatables.min.js"></script>
+    <!--  DataTables -->
+    <script type="text/javascript"
+            src="https://cdn.datatables.net/v/bs5/dt-1.11.3/b-2.0.1/sl-1.3.3/datatables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
+    <script src="DataTable.js"></script>
+    <script>
+        function changeImage1() {
+            var image = document.getElementById('myImage1');
+            var orders = document.getElementById('demo2');
+            if (image.src.match("1")) {
+                image.src = "assets/img/micrographic.png";
+                orders.innerHTML = "$6942.0 <i class=\"fas fa-arrow-circle-up\"></i>"
+            } else {
+                image.src = "assets/img/micrographic1.png";
+                orders.innerHTML = "$420.69 <i class=\"fas fa-arrow-circle-up\"></i>"
+            }
+        }
 
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-twitter"></i></a>
+        function changeImage() {
+            var image = document.getElementById('myImage');
+            var orders = document.getElementById('demo1');
+            if (image.src.match("1")) {
+                image.src = "assets/img/micrographic.png";
+                orders.innerHTML = "420 <i class=\"fas fa-arrow-circle-down\"></i>"
+            } else {
+                image.src = "assets/img/micrographic1.png";
+                orders.innerHTML = "69 <i class=\"fas fa-arrow-circle-down\"></i>"
+            }
+        }
+    </script>
 
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-google"></i></a>
+</main>
 
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-instagram"></i></a>
+<footer class="bg-dark text-center text-white">
+    <div class="container p-4 pb-0">
+        <section class="mb-4">
+            <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i
+                    class="fab fa-facebook-f"></i></a>
 
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-linkedin-in"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i
+                    class="fab fa-twitter"></i></a>
 
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                        class="fab fa-github"></i></a>
-            </section>
-        </div>
+            <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i
+                    class="fab fa-google"></i></a>
 
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-            Desarrollado por: MINT
-        </div>
-    </footer>
+            <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i
+                    class="fab fa-instagram"></i></a>
+
+            <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i
+                    class="fab fa-linkedin-in"></i></a>
+
+            <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i
+                    class="fab fa-github"></i></a>
+        </section>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        Develop by MINT
+    </div>
+</footer>
 </body>
 
 </html>
