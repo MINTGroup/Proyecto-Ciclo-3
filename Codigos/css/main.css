@@ -26,3 +26,14 @@
     margin-left: auto;
 }
 
+.btn-logreg {
+    background-color: #38d39f;
+    height: 55px;
+}
+.btn-logreg:hover{
+    cursor: pointer;
+    background: #24a178;
+}
+.form-control:focus{
+    box-shadow: none;
+}
