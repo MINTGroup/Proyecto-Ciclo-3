@@ -5,6 +5,9 @@ $(document).ready(function() {
             search: '<i class="fas fa-search"></i> ',
             searchPlaceholder: 'Search'
         },
+        rowReorder: {
+            selector: 'td:nth-child(3)'
+        },
         columnDefs: [ {
             orderable: false,
             className: 'select-checkbox',
@@ -15,6 +18,7 @@ $(document).ready(function() {
             selector: 'td:first-child'
         },
         order: [[ 1, 'asc' ]],
+        responsive: true
     } );
 
     $('#MyTableCheckAllButton1').click(function() {
@@ -59,6 +63,9 @@ $(document).ready(function() {
             search: '<i class="fas fa-search"></i> ',
             searchPlaceholder: 'Search'
         },
+        rowReorder: {
+            selector: 'td:nth-child(3)'
+        },
         columnDefs: [ {
             orderable: false,
             className: 'select-checkbox',
@@ -69,6 +76,7 @@ $(document).ready(function() {
             selector: 'td:first-child'
         },
         order: [[ 1, 'asc' ]],
+        responsive: true
     } );
 
     $('#MyTableCheckAllButton2').click(function() {

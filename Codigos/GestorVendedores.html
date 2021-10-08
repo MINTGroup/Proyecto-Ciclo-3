@@ -15,8 +15,10 @@
 
     <!--  DataTables -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowreorder/1.2.8/css/rowReorder.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css" />
+
     <!--  SS & Fonts -->
     <script src="https://kit.fontawesome.com/931cb478e2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css" />
@@ -206,10 +208,6 @@
                 </div>
             </div>
 
-
-
-
-
             <a name="Product List"></a>
             <div class="row mb-4 mt-2">
                 <div class="col-12">
@@ -244,7 +242,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="table-responsive-lg">
-                                    <table id="data-table-I" class="display col-12" style="width:100%">
+                                    <table id="data-table-I" class="display nowrap" style="width:100%">
                                         <caption>
                                             <p class="text-muted">Product List</p>
                                         </caption>
@@ -477,10 +475,7 @@
                                     </table>
                                 </div>
                             </div>
-
                         </div>
-
-
                     </div>
                 </div>
             </div>
@@ -833,9 +828,6 @@
                     </div>
                 </div>
             </div>
-
-
-
         </div>
     </main>
 
@@ -866,8 +858,6 @@
         </div>
     </footer>
 
-
-
     <!--Optional DataTable JS Init-->
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -878,6 +868,8 @@
     </script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/rowreorder/1.2.8/js/dataTables.rowReorder.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
     <script src="DataTable.js"></script>
     <script>
         function changeImage1() {
