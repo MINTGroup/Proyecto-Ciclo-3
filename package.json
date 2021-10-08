@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "npx": "^10.2.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -37,6 +38,20 @@
     ]
   },
   "devDependencies": {
+    "graceful-fs": "^4.2.8",
     "react-router-dom": "^5.3.0"
-  }
+  },
+  "description": "Repositorio para el proyecto MinTIC del ciclo 3.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MINTGroup/Proyecto-Ciclo-3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MINTGroup/Proyecto-Ciclo-3/issues"
+  },
+  "homepage": "https://github.com/MINTGroup/Proyecto-Ciclo-3#readme"
 }
