@@ -5,22 +5,27 @@ $(document).ready(function() {
             search: '<i class="fas fa-search"></i> ',
             searchPlaceholder: 'Search'
         },
+        rowReorder: {
+            selector: 'td:nth-child(2)'
+        },
         columnDefs: [ {
             orderable: false,
             className: 'select-checkbox',
             targets:   0
-        } ],
+        }],
         select: {
             style:    'multi',
             selector: 'td:first-child'
         },
         order: [[ 1, 'asc' ]],
+        responsive: true,
     } );
 
     $('#MyTableCheckAllButton1').click(function() {
         if (DTI.rows({
             selected: true
         }).count() > 0) {
+            DTI.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
             DTI.rows().deselect();
             return;
         }
@@ -30,7 +35,6 @@ $(document).ready(function() {
 
     DTI.on('select deselect', function(e, dt, type) {
         if (type === 'row') {
-            // We may use dt instead of myTable to have the freshest data.
             if (dt.rows().count() === dt.rows({
                 selected: true
             }).count()) {
@@ -59,32 +63,35 @@ $(document).ready(function() {
             search: '<i class="fas fa-search"></i> ',
             searchPlaceholder: 'Search'
         },
+        rowReorder: {
+            selector: 'td:nth-child(2)'
+        },
         columnDefs: [ {
             orderable: false,
             className: 'select-checkbox',
             targets:   0
-        } ],
+        }],
         select: {
             style:    'multi', // 'single', 'multi', 'os', 'multi+shift'
             selector: 'td:first-child'
         },
         order: [[ 1, 'asc' ]],
+        responsive: true
     } );
 
     $('#MyTableCheckAllButton2').click(function() {
         if (DTII.rows({
             selected: true
         }).count() > 0) {
+            DTII.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
             DTII.rows().deselect();
             return;
         }
-
         DTII.rows().select();
     });
 
     DTII.on('select deselect', function(e, dt, type) {
         if (type === 'row') {
-            // We may use dt instead of myTable to have the freshest data.
             if (dt.rows().count() === dt.rows({
                 selected: true
             }).count()) {
@@ -92,7 +99,6 @@ $(document).ready(function() {
                 $('#MyTableCheckAllButton2 i').attr('class', 'far fa-check-square');
                 return;
             }
-
             if (dt.rows({
                 selected: true
             }).count() === 0) {
