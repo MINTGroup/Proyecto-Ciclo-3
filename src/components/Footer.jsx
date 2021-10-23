@@ -1,38 +1,33 @@
 import React from "react";
-import logo from "../media/logo.png"
 
-const Footer = () => {
-    return ( <div> <h3>Footer</h3>
-        <footer className="footer">
-            <section className="footer-content">
-                <ul>
-                    <h3>Developed by: </h3>
-                    <img className="footer-img" src={logo}/>
+const Footer = () =>{
+    return(
+        <footer className="bg-tertiary text-center text-white">
+            <div className="container p-4 pb-0">
+                <section className="mb-4">
+                    <a className="btn btn-outline-light btn-floating m-1" href="#" role="button"><i
+                        className="fab fa-facebook-f"></i></a>
 
-                    <li>MINT - Software development.
-                    </li>
-                    <h3 className="contact">Contact.</h3>
-                </ul>
-            </section>
-            <section className="footer-content">
-                <ul>
-                    <li>Misión TIC 2022.
-                    </li>
-                    <li>Universidad de Antioquia - Ministerio TIC.
-                    </li>
-                    <li>Colombia.
-                    </li>
-                    <li>2021.
-                    </li>
-                    <li>Rights Reserved. (?)
-                    </li>
-                </ul>
+                    <a className="btn btn-outline-light btn-floating m-1" href="#" role="button"><i
+                        className="fab fa-twitter"></i></a>
 
-            </section>
+                    <a className="btn btn-outline-light btn-floating m-1" href="#" role="button"><i
+                        className="fab fa-google"></i></a>
+
+                    <a className="btn btn-outline-light btn-floating m-1" href="#" role="button"><i
+                        className="fab fa-instagram"></i></a>
+
+                    <a className="btn btn-outline-light btn-floating m-1" href="#" role="button"><i
+                        className="fab fa-linkedin-in"></i></a>
+
+                    <a className="btn btn-outline-light btn-floating m-1" href="#" role="button"><i
+                        className="fab fa-github"></i></a>
+                </section>
+            </div>
+            <div className="text-center p-3 bg-primary" style={{backgroundColor: 'rgba(0,0,0,.25)'}}>
+                Developed by MINT
+            </div>
         </footer>
-        </div>
-
     );
-};
-
+}
 export default Footer;

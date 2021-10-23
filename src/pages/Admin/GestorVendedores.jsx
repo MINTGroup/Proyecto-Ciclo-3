@@ -1,8 +1,6 @@
 import React from "react";
-import {useDarkMode} from "../../context/darkMode";
 
-const Index = () =>{
-    const {darkMode}=useDarkMode();
+const GestorVendedores = () => {
     return (
         <div className="container-xxl">
             <div className="fondo p-4">
@@ -152,7 +150,6 @@ const Index = () =>{
                 <div>Espacio para componente de tablas</div>
             </div>
         </div>
-
     );
 }
-export default Index;
+export default GestorVendedores;

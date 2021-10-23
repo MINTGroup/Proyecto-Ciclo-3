@@ -1,0 +1,100 @@
+/*@login login;*/
+
+body {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.fondo {
+    background-color: #e2e5e8;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 10px;
+
+}
+
+.bg-primary {
+    background-color: #279d85 !important;
+}
+
+.bg-secondary {
+    background-color: #091f3c !important;
+
+}
+.bg-tertiary {
+    background-color: #2a2929 !important;
+
+}
+
+.gb-cuaternary{
+    background-color: #e5e5e5 !important;
+}
+/*.gradient-custom {
+    background: linear-gradient(to bottom, rgba(42, 41, 41, 0.5), rgba(0, 0, 0, 0.5))
+}*/
+
+.btn-outline-primary {
+    border-color: #091f3c;
+    color: #279d85;
+    box-shadow: none;
+}
+
+.btn-check:active+.btn-outline-primary, .btn-check:checked+.btn-outline-primary, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show, .btn-outline-primary:active,.btn-outline-primary:hover {
+    color: #f8f9fa;
+    background-color: #279d85;
+    border-color: #279d85;
+    box-shadow: none;
+}
+
+.btn-outline-secondary {
+    border-color: #f8f9fa;
+    color: #091f3c;
+    box-shadow: none;
+}
+
+.btn-check:active + .btn-outline-secondary, .btn-check:checked + .btn-outline-secondary, .btn-outline-secondary.active, .btn-outline-secondary.dropdown-toggle.show, .btn-outline-secondary:active,.btn-outline-secondary:hover {
+    color: #f8f9fa;
+    background-color: #091f3c;
+    border-color: #091f3c;
+    box-shadow: none;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.btn-logreg {
+    background-color: #38d39f;
+    height: 55px;
+}
+
+.btn-logreg:hover {
+    cursor: pointer;
+    background: #24a178;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+#myImage {
+    max-width: 120px;
+}
+
+#myImage1 {
+    max-width: 120px;
+}
+
+logo{
+    width: 65px !important;
+    height: 65px !important;
+}
